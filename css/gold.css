@@ -1,0 +1,105 @@
+a {
+    text-decoration: none;
+}
+
+.gold {
+    width: 1070px;
+    height: 470px;
+    /* background-color: black; */
+    float: left;
+    position: absolute;
+    right: 0;
+}
+
+.gold>img {
+    position: absolute;
+    left: 50%;
+    top: -15px;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    float: left;
+}
+
+.itemHead li span {
+    float: left;
+}
+
+.country {
+    margin-left: 50px;
+    margin-right: 300px;
+    font-size: 20px;
+}
+
+.medal {
+    width: 50px;
+    margin-right: 120px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.headcol {
+    color: #FFFFFF;
+}
+
+.sum {
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.itembody {
+    margin-top: 20px;
+}
+
+.flag {
+    width: 37px;
+    height: 25px;
+    display: inline-block;
+}
+
+.number {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.bodyCountry {
+    margin-left: 20px;
+    margin-right: 270px;
+    font-size: 25px;
+    line-height: 25px;
+}
+
+.bodymedal {
+    width: 50px;
+    margin-right: 134px;
+    text-align: center;
+    opacity: 0.9;
+    font-family: 'baidunumber Medium';
+    font-size: 25px;
+}
+
+.bodysum {
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+.aodili {
+    margin-left: 20px;
+    margin-right: 246px;
+    font-size: 25px;
+    line-height: 25px;
+}
+
+.seemore {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    float: left;
+    border-radius: 10px;
+}
+
+.seemore:hover {
+    opacity: 0.7;
+}

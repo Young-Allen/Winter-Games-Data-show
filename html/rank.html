@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奖牌排名</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .rank-bg {
+            width: 1100px;
+            height: auto;
+            background-color: rgb(245, 245, 245);
+            margin: auto;
+        }
+        
+        .rank-head {
+            width: 1070px;
+            height: 100px;
+            background-color: rgb(198, 216, 223);
+            margin: auto;
+            margin-top: 8px;
+            border-radius: 20px;
+        }
+        
+        .rank-body {
+            margin: auto;
+            width: 1070px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+        }
+        
+        .col {
+            color: black;
+        }
+        
+        .col-red {
+            color: rgb(201, 49, 49);
+        }
+        
+        .borderBbottom {
+            border-bottom: 0.5px solid rgb(245, 245, 245);
+        }
+        
+        .els {
+            margin-left: 20px;
+            margin-right: 170px;
+            font-size: 25px;
+            line-height: 25px;
+        }
+        
+        .rankCountry {
+            margin-left: 20px;
+            margin-right: 256px;
+            font-size: 25px;
+            line-height: 25px;
+        }
+        
+        .wid {
+            width: 380px;
+            font-size: 25px;
+            display: inline-block;
+        }
+        
+        .wid1 {
+            width: 366px;
+            font-size: 25px;
+            display: inline-block;
+        }
+        
+        .rank-title {
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            font-size: 30px;
+            color: #ffffff;
+        }
+        
+        .rank-time {
+            position: absolute;
+            top: 70px;
+            left: 50px;
+            font-size: 15px;
+            color: #ffffff;
+        }
+        
+        .paiming {
+            height: 100px;
+            width: 200px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 25px;
+            display: inline-block;
+            margin-right: 545px;
+        }
+        
+        .jp {
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 25px;
+            display: inline-block;
+        }
+        
+        .jp>img {
+            margin-top: 10px;
+            margin-bottom: -15px;
+        }
+        
+        .title {
+            position: relative;
+        }
+    </style>
+    <!-- 排行榜的css -->
+    <link rel="stylesheet" href="../css/gold.css">
+</head>
+
+<body>
+    <div class="rank-bg">
+        <div class="title"><img src="https://search-operate.cdn.bcebos.com/f94480f1dd0c5d625da8d12b77c481df.jpeg" style="width: 1100px;">
+            <div class="rank-title">北京2022年冬奥会</div>
+            <div class="rank-time">2022.02.04-2022.02.20</div>
+        </div>
+
+        <div class="rank-head">
+            <div class="paiming">中国第6名</div>
+            <!-- 金牌 -->
+            <span class="jp">
+               <img src="https://search-operate.cdn.bcebos.com/87f7f3765960ea9ff14780cf3d3aed37.png" style="width: 50px;">
+            <span style="color: #D59F36;">6</span>
+            </span>
+            <!-- 银牌 -->
+            <span class="jp">
+                <img src="https://search-operate.cdn.bcebos.com/5f5b01f7473cf1f9058918f13bbe75cb.png" style="width: 50px;">
+             <span style="color: #7F7F7F">4</span>
+            </span>
+            <!-- 铜牌 -->
+            <span class="jp">
+                <img src="https://search-operate.cdn.bcebos.com/b9600bc4ebb1cbe5bd35a97af3cfc777.png" style="width: 50px;">
+                 
+             <span style="color: #FB7F32" >2</span>
+            </span>
+        </div>
+
+        <div class="rank-body">
+            <ul class="changeColor">
+                <li class="itemHead ">
+                    <div class="borderBbottom">
+                        <span class="country col">国家/地区</span>
+                        <span class="medal col">金</span>
+                        <span class="medal col">银</span>
+                        <span class="medal col">铜</span>
+                        <span class="sum col">总数</span>
+                    </div>
+                </li>
+                <!-- 第一名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #fe7873;">1</span>
+                            <span class="wid">
+                            <img src="https://search-operate.cdn.bcebos.com/f6486586ef8546849471effd1f905ae4.png" class="flag">
+                            <span class="col">挪威</span>
+                            </span>
+                            <span class="col bodymedal">9</span>
+                            <span class="col bodymedal">5</span>
+                            <span class="col bodymedal">7</span>
+                            <span class="col bodysum">21</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第二名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #ffa366;">2</span>
+                            <span class="wid">
+                                <img src="https://search-operate.cdn.bcebos.com/635f433e3db5cff4f103ef6f79044195.png" class="flag">
+                                <span class="col">德国</span>
+                            </span>
+                            <span class="col bodymedal">8</span>
+                            <span class="col bodymedal">5</span>
+                            <span class="col bodymedal">2</span>
+                            <span class="col bodysum">15</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第三名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #fccb6e;">3</span>
+                            <span class="wid">
+                            <img src="https://search-operate.cdn.bcebos.com/19f0d6e267727f9846559d420a2068a6.png" class="flag">
+                            <span class="col">美国</span>
+                            </span>
+                            <span class="col bodymedal">7</span>
+                            <span class="col bodymedal">6</span>
+                            <span class="col bodymedal">3</span>
+                            <span class="col bodysum">16</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第四名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">4</span>
+                            <span class="wid">
+                            <img src="https://search-operate.cdn.bcebos.com/e449bde913469bca9c7478ec17d2fe6c.png" class="flag">
+                            <span class="col">荷兰</span>
+                            </span>
+                            <span class="col bodymedal">6</span>
+                            <span class="col bodymedal">4</span>
+                            <span class="col bodymedal">2</span>
+                            <span class="col bodysum">12</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第五名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">5</span>
+                            <span class="wid">
+                            <img src="https://search-operate.cdn.bcebos.com/a91a98f1379006767add4790e003e8d1.png" class="flag">
+                            <span class="col">奥地利</span>
+                            </span>
+                            <span class="col bodymedal">5</span>
+                            <span class="col bodymedal">6</span>
+                            <span class="col bodymedal">4</span>
+                            <span class="col bodysum">15</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第六名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">6</span>
+                            <span class="wid">
+                            <img src="https://search-operate.cdn.bcebos.com/7dce3e5758a82e720ec1c7123d246616.png" class="flag">
+                            <span class="col">中国</span>
+                            </span>
+                            <span class="col-red bodymedal">5</span>
+                            <span class="col-red bodymedal">3</span>
+                            <span class="col-red bodymedal">2</span>
+                            <span class="col-red bodysum">10</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第7名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">7</span>
+                            <span class="wid">
+                            <img src="https://search-operate.cdn.bcebos.com/be502f5ee021af3e3cfc8a7ba6273a0b.png" class="flag">
+                            <span class="col">瑞典</span>
+                            </span>
+                            <span class="col bodymedal">5</span>
+                            <span class="col bodymedal">3</span>
+                            <span class="col bodymedal">3</span>
+                            <span class="col bodysum">11</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第8名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">8</span>
+                            <span class="wid">
+                            <img src="https://search-operate.cdn.bcebos.com/be6980d6afd68c698d92dd85b00ac35e.png" class="flag">
+                            <span class="col">瑞士</span>
+                            </span>
+                            <span class="col bodymedal">5</span>
+                            <span class="col bodymedal">0</span>
+                            <span class="col bodymedal">5</span>
+                            <span class="col bodysum">10</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第9名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">9</span>
+                            <span class="wid">
+                            <img src="https://search-operate.cdn.bcebos.com/8c00d69be531ba4b21d5100d2a13fb8b.png" class="flag">
+                            <span class="col">俄罗斯奥委会</span>
+                            </span>
+                            <span class="col bodymedal">4</span>
+                            <span class="col bodymedal">7</span>
+                            <span class="col bodymedal">9</span>
+                            <span class="col bodysum">20</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第10名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">10</span>
+                            <span class="wid1">
+                            <img src="https://search-operate.cdn.bcebos.com/cf81fe2ec21bfebf376ca1bfcee07b23.png" class="flag">
+                            <span class="col">法国</span>
+                            </span>
+                            <span class="col bodymedal">3</span>
+                            <span class="col bodymedal">7</span>
+                            <span class="col bodymedal">2</span>
+                            <span class="col bodysum">12</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第11名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">11</span>
+                            <span class="wid1">
+                            <img src="https://search-operate.cdn.bcebos.com/423cd3ef614db64295db547548f7f923.png" class="flag">
+                            <span class="col">意大利</span>
+                            </span>
+                            <span class="col bodymedal">2</span>
+                            <span class="col bodymedal">6</span>
+                            <span class="col bodymedal">5</span>
+                            <span class="col bodysum">13</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第12名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">12</span>
+                            <span class="wid1">
+                            <img src="https://search-operate.cdn.bcebos.com/4d04bde9a3248455c0d977e287c531e1.png" class="flag">
+                            <span class="col">日本</span>
+                            </span>
+                            <span class="col bodymedal">2</span>
+                            <span class="col bodymedal">5</span>
+                            <span class="col bodymedal">7</span>
+                            <span class="col bodysum">14</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第13名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">13</span>
+                            <span class="wid1">
+                            <img src="https://search-operate.cdn.bcebos.com/b57067797fdbe0ebed243460195b2298.png" class="flag">
+                            <span class="col">加拿大</span>
+                            </span>
+                            <span class="col bodymedal">2</span>
+                            <span class="col bodymedal">4</span>
+                            <span class="col bodymedal">11</span>
+                            <span class="col bodysum">17</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第14名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">14</span>
+                            <span class="wid1">
+                            <img src="https://search-operate.cdn.bcebos.com/6449070327b626423eab83cb5d04398b.png" class="flag">
+                            <span class="col">斯洛文尼亚</span>
+                            </span>
+                            <span class="col bodymedal">2</span>
+                            <span class="col bodymedal">3</span>
+                            <span class="col bodymedal">2</span>
+                            <span class="col bodysum">7</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第15名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">15</span>
+                            <span class="wid1">
+                            <img src="https://search-operate.cdn.bcebos.com/e24b749efc12aed7eceb8e7b9f5078e7.png" class="flag">
+                            <span class="col">韩国</span>
+                            </span>
+                            <span class="col bodymedal">1</span>
+                            <span class="col bodymedal">3</span>
+                            <span class="col bodymedal">1</span>
+                            <span class="col bodysum">5</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第16名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">16</span>
+                            <span class="wid1">
+                            <img src="https://search-operate.cdn.bcebos.com/9c6ae919870434634765897f52ca26b1.png" class="flag">
+                            <span class="col">澳大利亚</span>
+                            </span>
+                            <span class="col bodymedal">1</span>
+                            <span class="col bodymedal">2</span>
+                            <span class="col bodymedal">1</span>
+                            <span class="col bodysum">4</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第17名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">17</span>
+                            <span class="wid1">
+                            <img src="https://search-operate.cdn.bcebos.com/2b0d988284c8c5c1b15c3ea40ecafa4c.png" class="flag">
+                            <span class="col">芬兰</span>
+                            </span>
+                            <span class="col bodymedal">1</span>
+                            <span class="col bodymedal">1</span>
+                            <span class="col bodymedal">2</span>
+                            <span class="col bodysum">4</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第18名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">18</span>
+                            <span class="wid1">
+                            <img src="https://search-operate.cdn.bcebos.com/167bd3c2bfd513e778dc305ce259c126.png" class="flag">
+                            <span class="col">新西兰</span>
+                            </span>
+                            <span class="col bodymedal">1</span>
+                            <span class="col bodymedal">1</span>
+                            <span class="col bodymedal">0</span>
+                            <span class="col bodysum">2</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第19名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">19</span>
+                            <span class="wid1">
+                            <img src="https://search-operate.cdn.bcebos.com/c8b95824fc07fe8acbd8d0dd9f870da3.png" class="flag">
+                            <span class="col">匈牙利</span>
+                            </span>
+                            <span class="col bodymedal">1</span>
+                            <span class="col bodymedal">0</span>
+                            <span class="col bodymedal">2</span>
+                            <span class="col bodysum">3</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第20名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">20</span>
+                            <span class="wid1">
+                            <img src="https://search-operate.cdn.bcebos.com/92faa38328b03699e10b27be82f5b936.png" class="flag">
+                            <span class="col">捷克</span>
+                            </span>
+                            <span class="col bodymedal">1</span>
+                            <span class="col bodymedal">0</span>
+                            <span class="col bodymedal">1</span>
+                            <span class="col bodysum">2</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第21名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">21</span>
+                            <span class="wid1">
+                            <img src="https://search-operate.cdn.bcebos.com/c03768ec564b2ea2d5d86237f090b817.png" class="flag">
+                            <span class="col">斯洛伐克</span>
+                            </span>
+                            <span class="col bodymedal">1</span>
+                            <span class="col bodymedal">0</span>
+                            <span class="col bodymedal">0</span>
+                            <span class="col bodysum">1</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第22名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">22</span>
+                            <span class="wid1">
+                            <img src="https://search-operate.cdn.bcebos.com/e600b0b06bff06f9571c95212705d9bb.png" class="flag">
+                            <span class="col">白俄罗斯</span>
+                            </span>
+                            <span class="col bodymedal">0</span>
+                            <span class="col bodymedal">2</span>
+                            <span class="col bodymedal">0</span>
+                            <span class="col bodysum">2</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第23名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">23</span>
+                            <span class="wid1">
+                            <img src="https://search-operate.cdn.bcebos.com/423b6f44c2672d58086b04ac39ae15e5.png" class="flag">
+                            <span class="col">西班牙</span>
+                            </span>
+                            <span class="col bodymedal">0</span>
+                            <span class="col bodymedal">1</span>
+                            <span class="col bodymedal">0</span>
+                            <span class="col bodysum">1</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第24名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">24</span>
+                            <span class="wid1">
+                            <img src="https://search-operate.cdn.bcebos.com/794d8863eb276713c481c3398736b06e.png" class="flag">
+                            <span class="col">比利时</span>
+                            </span>
+                            <span class="col bodymedal">0</span>
+                            <span class="col bodymedal">0</span>
+                            <span class="col bodymedal">1</span>
+                            <span class="col bodysum">1</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第25名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">24</span>
+                            <span class="wid1">
+                            <img src="https://search-operate.cdn.bcebos.com/84819e6d8cee20e9c45107ed44350b07.png" class="flag">
+                            <span class="col">爱沙尼亚</span>
+                            </span>
+                            <span class="col bodymedal">0</span>
+                            <span class="col bodymedal">0</span>
+                            <span class="col bodymedal">1</span>
+                            <span class="col bodysum">1</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第26名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">24</span>
+                            <span class="wid1">
+                            <img src="https://search-operate.cdn.bcebos.com/47fb4ad3dd962b18e656576cf31bec23.png" class="flag">
+                            <span class="col">拉脱维亚</span>
+                            </span>
+                            <span class="col bodymedal">0</span>
+                            <span class="col bodymedal">0</span>
+                            <span class="col bodymedal">1</span>
+                            <span class="col bodysum">1</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- 第27名 -->
+                <li class="itembody borderBbottom">
+                    <a href="javascript:;">
+                        <div>
+                            <span class="number" style="color: #887174;">24</span>
+                            <span class="wid1">
+                            <img src="https://search-operate.cdn.bcebos.com/ce6c0f30021b42f1c151ef67cbf34659.png" class="flag">
+                            <span class="col">波兰</span>
+                            </span>
+                            <span class="col bodymedal">0</span>
+                            <span class="col bodymedal">0</span>
+                            <span class="col bodymedal">1</span>
+                            <span class="col bodysum">1</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        var changeColor = document.querySelector('.changeColor');
+        for (var i = 0; i < changeColor.children.length; i++) {
+            changeColor.children[0].onmouseover = '';
+            changeColor.children[i].onmouseover = function() {
+                this.style.backgroundColor = '#b4b8c5';
+            }
+            changeColor.children[i].onmouseout = function() {
+                this.style.backgroundColor = '';
+            }
+        }
+    </script>
+</body>
+
+</html>

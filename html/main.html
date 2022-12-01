@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022北京冬奥会</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(85, 143, 249);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            perspective: 1000px;
+        }
+        
+        .bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -10;
+            zoom: 1;
+            background-repeat: no-repeat;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            background-position: center 0;
+            background-image: url(../images/bg.jpg);
+        }
+        
+        .top {
+            width: 900px;
+            height: 400px;
+            margin: auto;
+            /* background-color: pink; */
+        }
+        
+        .top h1 {
+            margin: auto;
+            text-align: center;
+            color: floralwhite;
+            font-size: 50px;
+        }
+        
+        .con {
+            width: 1600px;
+            height: 500px;
+            /* background-color: pink; */
+            margin: auto;
+            position: relative;
+        }
+    </style>
+    <!-- 奥运头条的css -->
+    <link rel="stylesheet" href="../css/animate.css">
+    <!-- 排行榜的css -->
+    <link rel="stylesheet" href="../css/gold.css">
+    <!-- 热门项目的css -->
+    <link rel="stylesheet" href="../css/event.css">
+    <!-- 数据展示的css -->
+    <link rel="stylesheet" href="../css/data.css">
+    <!-- 动画的js -->
+    <script src="../js/animate.js"></script>
+    <!-- 图片移动的js -->
+    <script src="../js/move.js"></script>
+    <!-- 数据图的js -->
+    <script src="../js/echarts.js"></script>
+
+</head>
+
+<body>
+    <div class="bg">
+        <div class="top">
+            <img src="../images/BEIJING2022.png" style="width: 400px;height: 300px; margin: auto;">
+            <img src="../images/bdd.png" style="width:400px;height: 255px;">
+            <h1>北京冬奥会数据</h1>
+        </div>
+
+        <div class="con">
+            <!-- 奥运头条栏目 -->
+            <div class="news">
+                <img src="../images/news.png" style="width: 520px;">
+                <div class="detils">
+                    <ul>
+                        <li>
+                            <a href="https://mbd.baidu.com/newspage/data/mdpage?tag=8&id=8381"><img src="../images/news1.png"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><img src="../images/news2.png"></a>
+                        </li>
+                        <li>
+                            <a href="https://mbd.baidu.com/newspage/data/landingsuper?pageType=1&context=%7B%22nid%22%3A%22news_9219256178177312724%22,%22sourceFrom%22%3A%22bjh%22%7D"><img src="../images/news3.png"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><img src="../images/new4.png"></a>
+                        </li>
+                    </ul>
+
+                    <a href="javascript:;"><img src="../images/left.png" class="leftbtn"></a>
+                    <a href="javascript:;"><img src="../images/right.png" class="rightbtn"></a>
+
+                    <ul class="nav">
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- 奖牌榜栏目 -->
+            <div class="gold">
+                <img src="../images/gold.png">
+                <ul>
+                    <li class="itemHead">
+                        <div>
+                            <span class="country headcol">国家/地区</span>
+                            <span class="medal headcol">金</span>
+                            <span class="medal headcol">银</span>
+                            <span class="medal headcol">铜</span>
+                            <span class="sum headcol">总数</span>
+                        </div>
+                    </li>
+                    <!-- 第一名 -->
+                    <li class="itembody">
+                        <a href="javascript:;">
+                            <div>
+                                <span class="number" style="color: #fe7873;">1</span>
+                                <span>
+                                <img src="https://search-operate.cdn.bcebos.com/f6486586ef8546849471effd1f905ae4.png" class="flag">
+                                <span class="bodyCountry headcol">挪威</span>
+                                </span>
+                                <span class="headcol bodymedal">9</span>
+                                <span class="headcol bodymedal">5</span>
+                                <span class="headcol bodymedal">7</span>
+                                <span class="headcol bodysum">21</span>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 第二名 -->
+                    <li class="itembody">
+                        <a href="javascript:;">
+                            <div>
+                                <span class="number" style="color: #ffa366;">2</span>
+                                <span>
+                                    <img src="https://search-operate.cdn.bcebos.com/635f433e3db5cff4f103ef6f79044195.png" class="flag">
+                                    <span class="bodyCountry headcol">德国</span>
+                                </span>
+                                <span class="headcol bodymedal">8</span>
+                                <span class="headcol bodymedal">5</span>
+                                <span class="headcol bodymedal">2</span>
+                                <span class="headcol bodysum">15</span>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 第三名 -->
+                    <li class="itembody">
+                        <a href="javascript:;">
+                            <div>
+                                <span class="number" style="color: #fccb6e;">3</span>
+                                <span>
+                                <img src="https://search-operate.cdn.bcebos.com/19f0d6e267727f9846559d420a2068a6.png" class="flag">
+                                <span class="bodyCountry headcol">美国</span>
+                                </span>
+                                <span class="headcol bodymedal">7</span>
+                                <span class="headcol bodymedal">6</span>
+                                <span class="headcol bodymedal">3</span>
+                                <span class="headcol bodysum">16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 第四名 -->
+                    <li class="itembody">
+                        <a href="javascript:;">
+                            <div>
+                                <span class="number" style="color: #fff;">4</span>
+                                <span>
+                                <img src="https://search-operate.cdn.bcebos.com/e449bde913469bca9c7478ec17d2fe6c.png" class="flag">
+                                <span class="bodyCountry headcol">荷兰</span>
+                                </span>
+                                <span class="headcol bodymedal">6</span>
+                                <span class="headcol bodymedal">4</span>
+                                <span class="headcol bodymedal">2</span>
+                                <span class="headcol bodysum">12</span>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 第五名 -->
+                    <li class="itembody">
+                        <a href="javascript:;">
+                            <div>
+                                <span class="number" style="color: #fff;">5</span>
+                                <span>
+                                <img src="https://search-operate.cdn.bcebos.com/a91a98f1379006767add4790e003e8d1.png" class="flag">
+                                <span class="aodili headcol">奥地利</span>
+                                </span>
+                                <span class="headcol bodymedal">5</span>
+                                <span class="headcol bodymedal">6</span>
+                                <span class="headcol bodymedal">4</span>
+                                <span class="headcol bodysum">15</span>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 第六名 -->
+                    <li class="itembody">
+                        <a href="javascript:;">
+                            <div>
+                                <span class="number" style="color: #fff;">6</span>
+                                <span>
+                                <img src="https://search-operate.cdn.bcebos.com/7dce3e5758a82e720ec1c7123d246616.png" class="flag">
+                                <span class="bodyCountry headcol">中国</span>
+                                </span>
+                                <span class="headcol bodymedal">5</span>
+                                <span class="headcol bodymedal">3</span>
+                                <span class="headcol bodymedal">2</span>
+                                <span class="headcol bodysum">10</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <a href="../html/rank.html"><img src="../images/seemore.png" class="seemore"></a>
+            </div>
+
+            <!-- 热门项目栏目 -->
+            <div class="event">
+                <img src="https://search-operate.cdn.bcebos.com/7fdde72a29c25b2a0b62b3a1f6b91af7.png">
+                <div class="popularEvent">热门项目</div>
+                <a href="#" class="conent">
+                    <div class="pic" style="background-image:url(../images/one.png) ;">
+                        <div class="title" style="background:#FE2D46;">1</div>
+                    </div>
+                    <div class="picName">花样滑冰</div>
+                </a>
+                <a href="#" class="conent">
+                    <div class="pic" style="background-image:url(../images/two.png) ;">
+                        <div class="title" style="background:#F56601;">2</div>
+                    </div>
+                    <div class="picName">短道速滑</div>
+                </a>
+                <a href="#" class="conent">
+                    <div class="pic" style="background-image:url(../images/three.png) ;">
+                        <div class="title" style="background:#F7A901;">3</div>
+                    </div>
+                    <div class="picName">冰壶</div>
+                </a>
+                <a href="#" class="conent">
+                    <div class="pic" style="background-image:url(../images/four.png) ;">
+                        <div class="title" style="background:#F7A901;">4</div>
+                    </div>
+                    <div class="picName">自由式滑雪空中技巧</div>
+                </a>
+                <a href="#" class="conent">
+                    <div class="pic" style="background-image:url(../images/five.png) ;">
+                        <div class="title" style="background:#F7A901;">5</div>
+                    </div>
+                    <div class="picName">单板坡面滑雪障碍技巧</div>
+                </a>
+                <a href="../html/bigdata.html"><img src="../images/seemore.png" class="seemore"></a>
+            </div>
+
+            <div class="data">
+                <div class="popularEvent">数据展示</div>
+                <div id="main" style="width: 1080px;height:500px;"></div>
+            </div>
+
+        </div>
+
+        <div class="footer"></div>
+    </div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '各国奖牌数据展示Top6',
+                textStyle: {
+                    fontSize: 25
+                },
+            },
+            tooltip: {},
+            legend: {
+                data: ['金牌', '银牌', '铜牌'],
+                textStyle: {
+                    fontSize: 25
+                }
+            },
+            xAxis: {
+                data: ['挪威', '德国', '美国', '奥地利', '中国', '荷兰'],
+                axisLabel: {
+                    textStyle: {
+                        fontSize: 20,
+                        color: 'black',
+                    }
+                }
+            },
+            yAxis: {
+                axisLabel: {
+                    textStyle: {
+                        fontSize: 20,
+                        color: 'black',
+                    }
+                }
+            },
+            series: [{
+                name: '金牌',
+                type: 'bar',
+                data: [9, 8, 7, 6, 6, 6],
+                stack: 'x',
+                color: ['#FFBE46'],
+                itemStyle: {
+                    barBorderRadius: 10,
+                    borderWidth: 1,
+                    borderType: 'solid',
+                    borderColor: '#73c0de',
+                    shadowColor: '#5470c6',
+                    shadowBlur: 3
+                },
+            }, {
+                name: '银牌',
+                type: 'bar',
+                data: [6, 5, 6, 6, 4, 4],
+                stack: 'x',
+                color: ['#bfbdc1'],
+                itemStyle: {
+                    barBorderRadius: 10,
+                    borderWidth: 1,
+                    borderType: 'solid',
+                    borderColor: '#73c0de',
+                    shadowColor: '#5470c6',
+                    shadowBlur: 3
+                },
+            }, {
+                name: '铜牌',
+                type: 'bar',
+                data: [7, 2, 3, 4, 2, 2],
+                stack: 'x',
+                color: ['#FFFFFF'],
+                itemStyle: {
+                    barBorderRadius: 10,
+                    borderWidth: 1,
+                    borderType: 'solid',
+                    borderColor: '#73c0de',
+                    shadowColor: '#5470c6',
+                    shadowBlur: 3
+                },
+            }],
+
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>

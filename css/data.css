@@ -1,0 +1,9 @@
+.data {
+    width: 1070px;
+    height: 525px;
+    /* background-color: pink; */
+    float: left;
+    position: absolute;
+    right: 0;
+    top: 475px;
+}

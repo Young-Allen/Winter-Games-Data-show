@@ -1,0 +1,116 @@
+/* .nav {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    margin-left: -35px;
+    width: auto;
+    height: 13px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 7px;
+} */
+
+
+/* .nav li {
+    float: left;
+    width: 8px;
+    height: 8px;
+    background-color: pink;
+    border-radius: 50%;
+    margin: 3px;
+} */
+
+.news {
+    width: 520px;
+    height: 500px;
+    /* background-color: skyblue; */
+    position: absolute;
+    float: left;
+    top: 0;
+    left: 0;
+}
+
+.news>img {
+    position: absolute;
+    left: 50%;
+    top: -15px;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    float: left;
+}
+
+.detils {
+    width: 520px;
+    height: 420px;
+    /* background-color: rgb(235, 135, 135); */
+    position: relative;
+    overflow: hidden;
+}
+
+.leftbtn {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    transition: all 0.6s;
+}
+
+.leftbtn:hover {
+    transform: scale(1.2);
+}
+
+.rightbtn {
+    position: absolute;
+    top: 40%;
+    right: 0;
+    transition: all 0.6s;
+}
+
+.rightbtn:hover {
+    transform: scale(1.2);
+}
+
+.detils .nav {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -35px;
+    width: auto;
+    height: 13px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 7px;
+}
+
+.nav li {
+    float: left;
+    width: 8px;
+    height: 8px;
+    background-color: pink;
+    border-radius: 50%;
+    margin: 3px;
+}
+
+.nav .sel {
+    background-color: white;
+}
+
+.detils ul {
+    /* 一定要添加定位，否则无法移动 */
+    position: absolute;
+    width: 500%;
+    float: left;
+    left: 0;
+}
+
+.detils ul li {
+    float: left;
+    left: 0;
+    border-radius: 7px;
+}
+
+.detils ul li img {
+    border-radius: 30px;
+    transition: all 0.6s;
+}
+
+.detils ul li img:hover {
+    transform: scale(1.05);
+}
